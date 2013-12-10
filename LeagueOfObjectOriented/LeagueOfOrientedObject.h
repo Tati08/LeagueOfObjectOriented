@@ -15,6 +15,8 @@
 @property Jogador* player1;
 @property Jogador* player2;
 
+//aaaaaa
+
 -(void)jogar;
 
 -(Boolean)verificarVencedor;
