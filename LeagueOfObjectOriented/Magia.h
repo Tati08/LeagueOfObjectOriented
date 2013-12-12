@@ -11,8 +11,10 @@
 
 @interface Magia : Arma{
     double forca;
+    int forcaMaxima;
 }
 
 
 -(double)calcularForcaAtaque:(Jogador*)jogador;
+-(id) init;
 @end

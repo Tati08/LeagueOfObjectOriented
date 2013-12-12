@@ -13,6 +13,7 @@
 		271F246B1854F9B30024E200 /* Jogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F246A1854F9B30024E200 /* Jogador.m */; };
 		271F246E1854FBB50024E200 /* Arma.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F246D1854FBB50024E200 /* Arma.m */; };
 		271F24711854FEDE0024E200 /* LeagueOfOrientedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */; };
+		4C408D26185A219700004CC9 /* FabricaDeArmas.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C408D25185A219700004CC9 /* FabricaDeArmas.m */; };
 		6B3F2D8C185A11B9004FEB45 /* Arco.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F2D85185A11B9004FEB45 /* Arco.m */; };
 		6B3F2D8D185A11B9004FEB45 /* Espada.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F2D87185A11B9004FEB45 /* Espada.m */; };
 		6B3F2D8E185A11B9004FEB45 /* Machado.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F2D89185A11B9004FEB45 /* Machado.m */; };
@@ -40,10 +41,12 @@
 		271F24621854A34F0024E200 /* LeagueOfObjectOriented.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LeagueOfObjectOriented.1; sourceTree = "<group>"; };
 		271F24691854F9B30024E200 /* Jogador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogador.h; sourceTree = "<group>"; };
 		271F246A1854F9B30024E200 /* Jogador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogador.m; sourceTree = "<group>"; };
-		271F246C1854FBB50024E200 /* Arma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arma.h; sourceTree = "<group>"; };
-		271F246D1854FBB50024E200 /* Arma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arma.m; sourceTree = "<group>"; };
+		271F246C1854FBB50024E200 /* Arma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Arma.h; path = LeagueOfObjectOriented/Arma.h; sourceTree = "<group>"; };
+		271F246D1854FBB50024E200 /* Arma.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Arma.m; path = LeagueOfObjectOriented/Arma.m; sourceTree = "<group>"; };
 		271F246F1854FEDE0024E200 /* LeagueOfOrientedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueOfOrientedObject.h; sourceTree = "<group>"; };
 		271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeagueOfOrientedObject.m; sourceTree = "<group>"; };
+		4C408D24185A219700004CC9 /* FabricaDeArmas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FabricaDeArmas.h; sourceTree = "<group>"; };
+		4C408D25185A219700004CC9 /* FabricaDeArmas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FabricaDeArmas.m; sourceTree = "<group>"; };
 		6B3F2D84185A11B9004FEB45 /* Arco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Arco.h; path = LeagueOfObjectOriented/Arco.h; sourceTree = "<group>"; };
 		6B3F2D85185A11B9004FEB45 /* Arco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Arco.m; path = LeagueOfObjectOriented/Arco.m; sourceTree = "<group>"; };
 		6B3F2D86185A11B9004FEB45 /* Espada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Espada.h; path = LeagueOfObjectOriented/Espada.h; sourceTree = "<group>"; };
@@ -69,14 +72,6 @@
 		271F244F1854A34F0024E200 = {
 			isa = PBXGroup;
 			children = (
-				6B3F2D84185A11B9004FEB45 /* Arco.h */,
-				6B3F2D85185A11B9004FEB45 /* Arco.m */,
-				6B3F2D86185A11B9004FEB45 /* Espada.h */,
-				6B3F2D87185A11B9004FEB45 /* Espada.m */,
-				6B3F2D88185A11B9004FEB45 /* Machado.h */,
-				6B3F2D89185A11B9004FEB45 /* Machado.m */,
-				6B3F2D8A185A11B9004FEB45 /* Magia.h */,
-				6B3F2D8B185A11B9004FEB45 /* Magia.m */,
 				271F245D1854A34F0024E200 /* LeagueOfObjectOriented */,
 				271F245A1854A34F0024E200 /* Frameworks */,
 				271F24591854A34F0024E200 /* Products */,
@@ -102,15 +97,11 @@
 		271F245D1854A34F0024E200 /* LeagueOfObjectOriented */ = {
 			isa = PBXGroup;
 			children = (
-				271F245E1854A34F0024E200 /* main.m */,
-				271F24621854A34F0024E200 /* LeagueOfObjectOriented.1 */,
 				271F24601854A34F0024E200 /* Supporting Files */,
-				271F24691854F9B30024E200 /* Jogador.h */,
-				271F246A1854F9B30024E200 /* Jogador.m */,
-				271F246C1854FBB50024E200 /* Arma.h */,
-				271F246D1854FBB50024E200 /* Arma.m */,
-				271F246F1854FEDE0024E200 /* LeagueOfOrientedObject.h */,
-				271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */,
+				4C408D22185A20C400004CC9 /* arma */,
+				271F245E1854A34F0024E200 /* main.m */,
+				271F24611854A34F0024E200 /* LeagueOfObjectOriented-Prefix.pch */,
+				271F24621854A34F0024E200 /* LeagueOfObjectOriented.1 */,
 			);
 			path = LeagueOfObjectOriented;
 			sourceTree = "<group>";
@@ -118,9 +109,40 @@
 		271F24601854A34F0024E200 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				271F24611854A34F0024E200 /* LeagueOfObjectOriented-Prefix.pch */,
+				271F24691854F9B30024E200 /* Jogador.h */,
+				271F246A1854F9B30024E200 /* Jogador.m */,
+				271F246F1854FEDE0024E200 /* LeagueOfOrientedObject.h */,
+				271F24701854FEDE0024E200 /* LeagueOfOrientedObject.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C408D22185A20C400004CC9 /* arma */ = {
+			isa = PBXGroup;
+			children = (
+				271F246C1854FBB50024E200 /* Arma.h */,
+				271F246D1854FBB50024E200 /* Arma.m */,
+				4C408D24185A219700004CC9 /* FabricaDeArmas.h */,
+				4C408D25185A219700004CC9 /* FabricaDeArmas.m */,
+				4C408D23185A20D800004CC9 /* tipos */,
+			);
+			name = arma;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4C408D23185A20D800004CC9 /* tipos */ = {
+			isa = PBXGroup;
+			children = (
+				6B3F2D84185A11B9004FEB45 /* Arco.h */,
+				6B3F2D85185A11B9004FEB45 /* Arco.m */,
+				6B3F2D86185A11B9004FEB45 /* Espada.h */,
+				6B3F2D87185A11B9004FEB45 /* Espada.m */,
+				6B3F2D88185A11B9004FEB45 /* Machado.h */,
+				6B3F2D89185A11B9004FEB45 /* Machado.m */,
+				6B3F2D8A185A11B9004FEB45 /* Magia.h */,
+				6B3F2D8B185A11B9004FEB45 /* Magia.m */,
+			);
+			name = tipos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +203,7 @@
 				6B3F2D8E185A11B9004FEB45 /* Machado.m in Sources */,
 				271F245F1854A34F0024E200 /* main.m in Sources */,
 				271F246E1854FBB50024E200 /* Arma.m in Sources */,
+				4C408D26185A219700004CC9 /* FabricaDeArmas.m in Sources */,
 				6B3F2D8D185A11B9004FEB45 /* Espada.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

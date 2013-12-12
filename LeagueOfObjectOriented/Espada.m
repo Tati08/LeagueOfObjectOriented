@@ -30,4 +30,14 @@
     return nil;
 }
 
+-(id)init{
+    self = [super init];
+    if (self) {
+        desgaste = 0;
+        forcaMaxima = 10;
+    }
+    return self;
+}
+
+
 @end

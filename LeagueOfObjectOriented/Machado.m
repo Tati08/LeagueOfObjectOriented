@@ -11,8 +11,17 @@
 
 @implementation Machado
 
+-(id)init{
+    self = [super init];
+    if (self) {
+        desgaste = 0;
+        forcaMaxima = 10;
+    }
+    return self;
+}
+
+
 -(double)calcularForcaAtaque:(Jogador*)jogador{
-    forcaMaxima=10;
     desgaste++;
     double forca = (forcaMaxima-desgaste);
     if (jogador.raca == [Jogador ANAO]){
