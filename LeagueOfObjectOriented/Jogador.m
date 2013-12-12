@@ -105,7 +105,8 @@ static const int ANAO=3;
     return vida;
 }
 
--(float)sofreAtaque:(Arma*)armaUsada forca:(double)forca{
+-(float)sofreAtaque:(Arma*)armaUsada forca:(double)forca
+{
     return -1;
 }
 

@@ -15,13 +15,13 @@
     self = [super init];
     if (self) {
         forca = 2;
+        forcaMaxima = 10;
     }
     return self;
 }
 
 -(double)calcularForcaAtaque:(Jogador*)jogador{
     
-    int forcaMaxima = 10;
     forca = forca + 2;
     if(forca >= forcaMaxima){
         forca = forcaMaxima;
@@ -32,5 +32,6 @@
 
     return forca;
 }
+
 
 @end

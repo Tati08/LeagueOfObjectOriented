@@ -15,4 +15,5 @@
 }
 
 -(double)calcularForcaAtaque:(Jogador*)jogador;
+-(id) init;
 @end

@@ -16,4 +16,5 @@
 
 -(double)calcularForcaAtaque:(Jogador*)jogador;
 -(NSString *)statusDaArma:(Arma *)armaUsada;
+-(id) init;
 @end
