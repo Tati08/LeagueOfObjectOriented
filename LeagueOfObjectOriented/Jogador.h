@@ -1,30 +1,45 @@
 //
 //  Jogador.h
-//  LeagueOfObjectOriented
+//  RPG
 //
-//  Created by Vinicius Miana on 12/8/13.
-//  Copyright (c) 2013 Vinicius Miana. All rights reserved.
+//  Created by MICHEL ZARZOUR on 11/19/13.
+//  Copyright (c) 2013 MICHEL ZARZOUR. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Arma.h"
 
-#define ELFO 0
-#define HUMANO 1
-#define ORC 2
-#define ANAO 3
+@class Arma;
 
-@interface Jogador : NSObject {
-    
-    
+@interface Jogador : NSObject{
+    NSString *nome;
+    int raca;
+    float vida;
+    int forcaEscudo;
+    int ataque;
+    int defesa;
+    float forcaTotal;
+    Arma *armaPrimaria;
+    Arma *armaSecundaria;
 }
-@property (nonatomic) int raca;
-@property (nonatomic) float vida;
-@property (nonatomic) int forcaEscudo;
-@property (nonatomic) Arma* armaPrimaria;
-@property (nonatomic) Arma* armaSecundaria;
+
+@property (nonatomic,strong) NSString *nome;
+@property int raca;
+@property float vida;
+@property int ataque;
+@property int defesa;
+@property float forcaTotal;
+@property int forcaEscudo;
+@property Arma *armaPrimaria;
+@property Arma *armaSecundaria;
+
+-(id)initWithNome:(NSString *)n raca:(int)r;
+
++(int)ELFO;
++(int)HUMANO;
++(int)ORC;
++(int)ANAO;
 
 -(float)ataque:(Jogador*)adversario;
--(float)sofreAtaque:(Arma*)armaUsada forca:(double) forca;
+-(float)sofreAtaque:(Arma*)armaUsada forca:(double)forca;
 
 @end
