@@ -10,6 +10,7 @@
 #import "Arma.h"
 #import "Espada.h"
 #import "Arco.h"
+#import "FabricaDeArmas.h"
 
 @implementation Jogador
 
@@ -72,6 +73,15 @@ static const int ANAO=3;
         nome = n;
         raca = r;
         vida = 100;
+        int escolha;
+        FabricaDeArmas *galhinheiro;
+        NSLog(@"qual sera sua arma primaria? digite 1 para arco,2 para espada,3 para machado ou 4 para magia");
+        scanf("%d",&escolha);
+        armaPrimaria = [galhinheiro contruirarmaescolhida:escolha];
+        NSLog(@"qual sera sua arma secundaria? digite 1 para arco,2 para espada,3 para machado ou 4 para magia");
+        scanf("%d",&escolha);
+        armaSecundaria = [galhinheiro contruirarmaescolhida:escolha];
+        
         if ([self raca] == ELFO) {
             [self setDefesa:[self defesa]+10];
             
