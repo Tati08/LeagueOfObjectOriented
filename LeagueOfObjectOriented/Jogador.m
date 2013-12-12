@@ -11,6 +11,7 @@
 #import "Espada.h"
 #import "Arco.h"
 #import "FabricaDeArmas.h"
+#import "FabricaDeRacas.h"
 
 @implementation Jogador
 
@@ -47,58 +48,40 @@ static const int ANAO=3;
     return ANAO;
 }
 
--(id)init{
-    self = [super init];
-    if (self) {
-        nome = @"";
-        raca = -1;
-        vida = 100;
-        ataque=0;
-        defesa=0;
-        forcaTotal=0;
-        forcaEscudo = 0;
-        armaPrimaria = nil;
-        armaSecundaria = nil;
-    }
-    return self;
-}
 
--(id)initWithNome:(NSString *)n raca:(int)r{
-    if (r != ELFO && r != HUMANO && r != ORC && r!= ANAO) {
-        return nil;
-    }
+-(id)init
+{
     self = [super init];
     if (self) {
-        
-        nome = n;
-        raca = r;
-        vida = 100;
         int escolha;
         FabricaDeArmas *galhinheiro;
+        FabricaDeRacas *xikeiro;
+        
+        NSLog(@"digite o seu nome");
+        scanf("%@",&nome);
+        
+        vida = 100;
+        
+        forcaEscudo =10;
+        
+        NSLog(@"qual sera sua raca? digite 1 para elfo,2 para humano,3 para orc ou 4 para anao");
+        scanf("%d",&escolha);
+        raca = (escolha-1);
+        
+        [xikeiro ContruirComRacaEscolhida:raca andJogador:self];
+        
         NSLog(@"qual sera sua arma primaria? digite 1 para arco,2 para espada,3 para machado ou 4 para magia");
         scanf("%d",&escolha);
         armaPrimaria = [galhinheiro contruirarmaescolhida:escolha];
+        
         NSLog(@"qual sera sua arma secundaria? digite 1 para arco,2 para espada,3 para machado ou 4 para magia");
         scanf("%d",&escolha);
         armaSecundaria = [galhinheiro contruirarmaescolhida:escolha];
         
-        if ([self raca] == ELFO) {
-            [self setDefesa:[self defesa]+10];
-            
-        }else if([self raca] == ORC){
-            self.ataque=+10;
-            self.defesa=+5;
-        }else if([self raca] == ANAO){
-            self.ataque=+5;
-            self.defesa=+15;
-        }else if([self raca] == HUMANO){
-            self.defesa=+15;
-        }
-
+        
     }
     return self;
 }
-
 
 -(float)ataque:(Jogador*)adversario{
     float atk;

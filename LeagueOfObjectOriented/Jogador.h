@@ -17,7 +17,6 @@
     int forcaEscudo;
     int ataque;
     int defesa;
-    float forcaTotal;
     Arma *armaPrimaria;
     Arma *armaSecundaria;
 }
@@ -32,7 +31,7 @@
 @property Arma *armaPrimaria;
 @property Arma *armaSecundaria;
 
--(id)initWithNome:(NSString *)n raca:(int)r;
+-(id)init;
 
 +(int)ELFO;
 +(int)HUMANO;
