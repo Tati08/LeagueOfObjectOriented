@@ -58,7 +58,7 @@ static const int ANAO=3;
         FabricaDeRacas *xikeiro;
         
         NSLog(@"digite o seu nome");
-        scanf("%@",&nome);
+        scanf("%s",nome);
         
         vida = 100;
         
