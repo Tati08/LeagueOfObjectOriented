@@ -28,14 +28,14 @@
     Jogador *j2 = [[Jogador alloc] init;
     while (verificarVencedor = false)
         {
-            if(turno = 1)
+            if(turno == 1)
             {
-                [j1 ataque j2];
+                [j1 ataque:j2];
                 turno = 0;
             }
-            if(turno = 0)
+            if(turno == 0)
             {
-                [j2 ataque j1];
+                [j2 ataque:j1];
                 turno = 1;
             }
 
